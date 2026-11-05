@@ -46,3 +46,9 @@ Git-доказательства: `git log --graph --oneline --all`, `git branch
 ## Ограничения
 
 Поддерживается запрошенное подмножество SemVer MAJOR.MINOR.PATCH без prerelease/build. Регистрация двух файлов рассчитана на одного оператора; публикации в PyPI нет.
+
+## GitHub
+
+[darklezzzz/release-manager](https://github.com/darklezzzz/release-manager).
+
+Подтверждения успешных и предусмотренных неуспешных сценариев: [CI_EVIDENCE.md](CI_EVIDENCE.md).

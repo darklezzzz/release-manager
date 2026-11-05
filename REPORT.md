@@ -16,7 +16,7 @@ core: SemVer, bump, register и check_tag; отдельные workflow обыч�
 Стек: Python 3.11/3.12, стандартная библиотека, pytest 8.3.5, ruff 0.11.13;
 сборщик hatchling 1.27.0. Зависимости фиксируются в pyproject.toml и uv.lock.
 Консольный интерфейс — src/release_manager/cli.py, логика — src/release_manager/core.py,
-тесты — tests/. Платформа задания 8 отдельно определяет схему в storage.py.
+тесты — tests/.
 
 ## Схема алгоритма
 
@@ -63,7 +63,7 @@ def check_tag(project, tag):
 Основное свидетельство: [examples/release-checks.json](examples/release-checks.json).
 Локальные тесты: **18 passed in 0.01s**. Ruff и справка CLI: успешно.
 Полный протокол: [examples/verification.txt](examples/verification.txt).
-Общий набор: **94 тестов пройдены на Python 3.12.14 и Python 3.11.16**.
+Общий набор: **94 теста пройдены на Python 3.12.14 и Python 3.11.16**.
 Эти протоколы получены локально и не выдаются за GitHub Actions.
 
 ## Git и прослеживаемость
@@ -93,11 +93,12 @@ main
 После изменения версии через register требуется `uv lock` и фиксация обоих файлов.
 Установка wheel: `uv tool install dist/release_manager-1.0.0-py3-none-any.whl`.
 
-## Недостающие внешние свидетельства
+## Подтверждения GitHub Actions
 
-Workflow YAML подготовлен. Репозиторий не опубликован, URL реальных запусков
-GitHub Actions пока нет. Для сдачи нужны ссылки или скриншоты, перечисленные
-в CI_EVIDENCE.md. Публикация требует отдельного разрешения пользователя.
+- [Push main: успешный CI](https://github.com/darklezzzz/release-manager/actions/runs/42021370327) — success.
+- [Pull request: успешный CI](https://github.com/darklezzzz/release-manager/actions/runs/42021440317) — success.
+- [Релиз v1.0.0: wheel и sdist](https://github.com/darklezzzz/release-manager/actions/runs/42021370495) — success.
+- [Релиз v1.0.1: отказ до сборки](https://github.com/darklezzzz/release-manager/actions/runs/42021492986) — failure.
 
 ## Ограничения и вывод
 
@@ -106,5 +107,6 @@ GitHub Actions пока нет. Для сдачи нужны ссылки или
 Приложение выполняет локальные функциональные требования и имеет автоматизированные
 проверки. Реализованные практики SCM и организационные правила описаны в SCMP.md.
 Использование отдельных принципов ISO/IEC/IEEE 828:2012 не доказывает полного
-соответствия стандарту. GitHub-подтверждения, где они требуются, остаются отдельным
-внешним этапом до окончательной сдачи.
+соответствия стандарту. GitHub-подтверждения, где они требуются, собраны в CI_EVIDENCE.md.
+
+Репозиторий: [darklezzzz/release-manager](https://github.com/darklezzzz/release-manager).
