@@ -53,7 +53,11 @@ def register(project, changelog, version, changes):
     history = log.read_text(encoding="utf-8") if log.exists() else "# CHANGELOG\n"
     if re.search(r"^## \[" + re.escape(version) + r"\]", history, re.MULTILINE):
         raise ValueError("Версия уже зарегистрирована")
-    if not changes or any(not isinstance(c, str) or not c.strip() for c in changes):
+    if (
+        not isinstance(changes, list)
+        or not changes
+        or any(not isinstance(c, str) or not c.strip() for c in changes)
+    ):
         raise ValueError("Перечень изменений обязателен")
     # Match the project table only, leaving dependency and tool versions intact.
     text = target.read_text(encoding="utf-8")
