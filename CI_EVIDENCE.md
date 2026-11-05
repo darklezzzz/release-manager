@@ -1,20 +1,17 @@
-# Подтверждения CI
+# Подтверждения GitHub Actions
 
-Статус: workflow подготовлен; удалённые запуски GitHub Actions ещё не выполнялись.
-Локальные результаты находятся в examples/verification.txt. Они не заменяют ссылки
-или скриншоты Actions, требуемые для сдачи.
+Все ссылки ведут на реальные завершённые запуски.
 
-После разрешённой публикации отдельного репозитория необходимо сохранить:
+- [Push main: успешный CI](https://github.com/darklezzzz/release-manager/actions/runs/42021370327): `success`, commit `e73bc7a6074d0d0def813b640611ae104a00f32a`.
+- [Pull request: успешный CI](https://github.com/darklezzzz/release-manager/actions/runs/42021440317): `success`, commit `1e3c2ba6ff701d35fc36e75e2e633166b6ed8aaf`.
+- [Релиз v1.0.0: wheel и sdist](https://github.com/darklezzzz/release-manager/actions/runs/42021370495): `success`, commit `b3b544ea6d59b79a08581aabcdc261c3b2e9d521`.
+- [Релиз v1.0.1: отказ до сборки](https://github.com/darklezzzz/release-manager/actions/runs/42021492986): `failure`, commit `b3b544ea6d59b79a08581aabcdc261c3b2e9d521`.
 
-- URL успешного запуска push с Python 3.11/3.12;
-- URL успешного запуска pull_request;
-- для задания 5: URL намеренно неуспешного запуска и исправляющего коммита;
-- для задания 6: URL успешного v1.0.0 и неуспешного несовпадающего тега v1.0.1;
-- для задания 8: URL двух рассмотренных pull requests.
+[Pull request с проверкой](https://github.com/darklezzzz/release-manager/pull/1).
 
-Обычный CI не вызывает release-manager check-tag; тестирование без тега обязательно.
-Только release.yml в задании 6 запускает проверку тега перед созданием артефактов.
+Успешный Release build сохраняет python-distributions в Actions Artifacts.
+У v1.0.1 упал шаг Check release tag before building artifacts; артефактов нет.
+Обычный Python CI не требует тега и остаётся независимым от релизной проверки.
+Это автоматизированная сборка; публикация в PyPI и deployment не выполняются.
 
-Workflow основан на официальной документации:
-https://docs.github.com/en/actions/tutorials/build-and-test-code/python
-Версии Actions закреплены точными release-тегами; Python-зависимости — uv.lock.
+Полная метаинформация: github-evidence.json в общем комплекте сдачи.
