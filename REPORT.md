@@ -63,7 +63,7 @@ def check_tag(project, tag):
 Основное свидетельство: [examples/release-checks.json](examples/release-checks.json).
 Локальные тесты: **18 passed in 0.01s**. Ruff и справка CLI: успешно.
 Полный протокол: [examples/verification.txt](examples/verification.txt).
-Общий набор: **128 тестов пройдены на Python 3.12.14 и Python 3.11.16**.
+Общий набор: **94 тестов пройдены на Python 3.12.14 и Python 3.11.16**.
 Эти протоколы получены локально и не выдаются за GitHub Actions.
 
 ## Git и прослеживаемость
