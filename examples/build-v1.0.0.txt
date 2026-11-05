@@ -1,0 +1,7 @@
+LOCAL release job equivalent, tag=v1.0.0, exit=0
+Building source distribution...
+Building wheel from source distribution...
+Successfully built /private/var/folders/vf/8pnb6vbj4px256vfdf4gn9v40000gn/T/tmp8wjv5aex/v1.0.0/release_manager-1.0.0.tar.gz
+Successfully built /private/var/folders/vf/8pnb6vbj4px256vfdf4gn9v40000gn/T/tmp8wjv5aex/v1.0.0/release_manager-1.0.0-py3-none-any.whl
+
+Artifacts: ["release_manager-1.0.0-py3-none-any.whl", "release_manager-1.0.0.tar.gz"]

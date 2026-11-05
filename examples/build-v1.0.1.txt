@@ -1,0 +1,4 @@
+LOCAL release job equivalent, tag=v1.0.1, exit=2
+Ошибка: Версия Git-тега не соответствует версии пакета
+
+Artifacts: []

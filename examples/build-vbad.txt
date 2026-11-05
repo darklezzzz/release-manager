@@ -1,0 +1,4 @@
+LOCAL release job equivalent, tag=vbad, exit=2
+Ошибка: Версия должна иметь формат MAJOR.MINOR.PATCH без ведущих нулей
+
+Artifacts: []
